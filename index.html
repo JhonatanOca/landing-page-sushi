@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenko Sushi Fusión</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-container">
+            <span class="nav-brand">
+                <img src="images/logo.png" class="logo-img">
+                Tu Sushi
+            </span>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#gallery">Platillos</a></li>
+                <li><a href="#location-hours">Visítanos</a></li>
+                <li><a href="menu.pdf" target="_blank" class="nav-button">Menú</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="hero" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1>Kenko Sushi Fusión</h1>
+            <p class="slogan">¡La frescura que encanta!</p>
+            <a href="menu.pdf" class="button download-menu" target="_blank">Descargar Menú</a>
+        </div>
+    </header>
+
+    <section id="gallery" class="gallery">
+        <h2>Nuestros Platillos Estelares</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images/salmon empanizado.jpeg" alt="Sushi variado">
+                <p class="dish-name">Salmon empanizado</p>
+            </div>
+            <div class="gallery-item">
+                <img src="images/salmon tropical.jpeg" alt="Rolls de especialidad">
+                <p class="dish-name">Salmon tropical</p>
+            </div>
+            <div class="gallery-item">
+                <img src="images/spicy tuna.jpeg" alt="Nigiri y Sashimi">
+                <p class="dish-name">Spicy tuna</p>
+            </div>
+            <div class="gallery-item">
+                <img src="images/tempura roll.jpeg" alt="Plato combinado">
+                <p class="dish-name">Tempura roll</p>
+            </div>
+            </div>
+    </section>
+
+    <section id="location-hours" class="location-hours">
+        <h2>Visítanos</h2>
+        <div class="location-details">
+            <p><strong>Dirección:</strong> C. Árbol de la Vida Manzana 045, Bella Vista, 51172 San Salvador Tizatlalli, Méx.</p>
+            <p><a><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.5725604073905!2d-99.5752065!3d19.2574517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd8bf4e1956ed3%3A0xd67a6984944c6d0c!2skenko%20sushi%20fusi%C3%B3n!5e0!3m2!1ses!2smx!4v1752129403847!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></a></p>
+            <p><strong>Horario:</strong></p>
+            <ul>
+                <li>Martes a Sabado: 12:00 PM - 10:00 PM</li>
+                <li>Domingo: 12:00 PM - 9:00 PM</li>
+                <li>Lunes cerrado</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.facebook.com/share/195HThegsd/?mibextid=wwXIfr" target="_blank">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/kenko_sushi_fusion_?igsh=dnVyZXM3cjNlenY0&utm_source=qr" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@kenko_sushi?_t=ZM-8wE27iVuIpb&_r=1" target="_blank">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+            </div>
+        <p>© 2025 Kenko Sushi Fusión. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Close menu if open after clicking a link
+                const navLinks = document.getElementById('nav-links');
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    document.getElementById('hamburger-menu').classList.remove('active');
+                }
+            });
+        });
+
+        // Hamburger menu functionality
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburgerMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburgerMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside (optional, but good UX)
+        document.addEventListener('click', (event) => {
+            if (!navLinks.contains(event.target) && !hamburgerMenu.contains(event.target)) {
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    hamburgerMenu.classList.remove('active');
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

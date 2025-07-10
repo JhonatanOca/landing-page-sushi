@@ -1,0 +1,407 @@
+/* Estilos Generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5DC; /* Beige suave */
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+h1, h2 {
+    color: #000000;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Botón general */
+.button {
+    display: inline-block;
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.button:hover {
+    background-color: #333333;
+    transform: translateY(-2px);
+}
+
+/* Navbar */
+.navbar {
+    background-color: #000000; /* Negro para la navbar */
+    padding: 15px 20px;
+    position: sticky; /* Fija la navbar en la parte superior */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    color: #FFFFFF;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    cursor: default;
+    user-select: none;
+}
+
+.nav-brand .logo-img {
+    height: 60px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: #FFFFFF;
+    font-size: 1.1em;
+    padding: 5px 0;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #F5F5DC; /* Beige claro al pasar el ratón */
+    text-decoration: none;
+}
+
+.nav-links .nav-button {
+    background-color: #F5F5DC; /* Beige claro para el botón del menú */
+    color: #000000;
+    padding: 8px 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links .nav-button:hover {
+    background-color: #FFFFFF; /* Blanco al pasar el ratón */
+    color: #000000;
+}
+
+/* Hamburger Menu Icon */
+.hamburger-menu {
+    display: none; /* Oculto por defecto en pantallas grandes */
+    flex-direction: column;
+    cursor: pointer;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+
+.hamburger-menu .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #FFFFFF;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Animation for hamburger to close icon */
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Header (Hero Section) */
+.hero {
+    position: relative;
+    background-color: #FFFFFF;
+    padding: 120px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/imagen\ fondo.jpeg'); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.6) grayscale(0.2);
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    color: #FFFFFF;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+}
+
+.hero .slogan {
+    font-size: 1.6em;
+    color: #EEEEEE;
+    margin-bottom: 40px;
+    font-style: italic;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Galería de Fotos */
+.gallery {
+    padding: 60px 20px;
+    background-color: #F5F5DC;
+}
+
+.gallery h2 {
+    font-size: 2.5em;
+    margin-top: 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery-item { /* Contenedor para cada imagen y nombre */
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+    text-align: center; /* Centra el nombre del platillo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block; /* Elimina el espacio extra debajo de la imagen */
+    border-bottom: 1px solid #EEE; /* Pequeña línea divisoria */
+}
+
+.gallery-item .dish-name {
+    font-weight: bold;
+    color: #000000;
+    padding: 15px 10px;
+    margin: 0; /* Elimina márgenes por defecto del párrafo */
+    font-size: 1.1em;
+}
+
+/* Ubicación y Horario */
+.location-hours {
+    background-color: #FFFFFF;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.location-hours h2 {
+    font-size: 2.5em;
+    margin-top: 0;
+}
+
+.location-details {
+    margin-top: 30px;
+    font-size: 1.1em;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.location-details p {
+    margin-bottom: 10px;
+}
+
+.location-details ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.location-details li {
+    margin-bottom: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.social-links {
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 20px; /* Aumentado el margen horizontal para más separación */
+    color: #FFFFFF; /* Color blanco para los iconos */
+    font-size: 1.8em; /* Tamaño de los iconos */
+    transition: transform 0.2s ease;
+}
+
+.social-links a:hover { /* Efecto de hover para los iconos */
+    transform: scale(1.1);
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #000000;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease-in-out;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-20px);
+    }
+
+    .nav-links.active {
+        display: flex;
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .nav-links a {
+        padding: 10px 20px;
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+    }
+
+    .nav-links .nav-button {
+        width: auto;
+        margin: 15px auto;
+        display: block;
+    }
+
+    .navbar-container {
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero .slogan {
+        font-size: 1.2em;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero .slogan {
+        font-size: 1em;
+    }
+
+    .button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .gallery h2, .location-hours h2 {
+        font-size: 2em;
+    }
+
+    .nav-brand .logo-img {
+        height: 30px;
+    }
+}
