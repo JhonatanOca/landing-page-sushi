@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - Kenko Sushi Fusión</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-container">
+            <span class="nav-brand">
+                <img src="images/logo.png" class="logo-img">
+                Tu Sushi
+            </span>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#filosofia">Filosofía</a></li>
+                <li><a href="#instalaciones">Instalaciones</a></li>
+                <li><a href="pdf/Sushi Bar - Japanese Restaurant Printable Menu Template.pdf.pdf" target="_blank" class="nav-button">Menú</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="about-hero">
+        <div class="about-hero-content">
+            <h1>Quiénes Somos</h1>
+            <p>Descubre la pasión detrás de nuestros sabores.</p>
+        </div>
+    </header>
+
+    <section id="filosofia" class="about-section philosophy">
+        <h2>Nuestra Filosofía</h2>
+        <div class="content-wrapper">
+            <p>En Kenko Sushi Fusión, nuestra misión es ofrecer una experiencia culinaria que combine la **tradición japonesa** con la innovación de la **cocina de fusión**. Creemos firmemente en el uso de ingredientes frescos, sostenibles y de alta calidad para crear platillos que no solo satisfacen el paladar, sino que también nutren el espíritu.</p>
+            <p>Nos dedicamos a la excelencia en cada paso, desde la selección del pescado hasta la presentación de cada plato. Valoramos la creatividad, el respeto por los ingredientes y un servicio al cliente excepcional.</p>
+        </div>
+    </section>
+
+    <section id="instalaciones" class="about-section facilities">
+        <h2>Nuestras Instalaciones</h2>
+        <div class="content-wrapper">
+            <div class="facilities-grid">
+                <img src="images/instalaciones1.jpeg" alt="Interior del restaurante">
+                <img src="images/instalaciones2.jpeg" alt="Barra de sushi">
+                <img src="images/instalaciones3.jpeg" alt="Zona de mesas">
+            </div>
+            <p>Hemos diseñado un espacio acogedor y moderno para que disfrutes de tu comida en un ambiente relajado y elegante. Nuestras instalaciones combinan elementos minimalistas japoneses con detalles de diseño contemporáneo, creando el lugar perfecto para una comida rápida, una cena íntima o una celebración especial.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.facebook.com/share/195HThegsd/?mibextid=wwXIfr" target="_blank">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/kenko_sushi_fusion_?igsh=dnVyZXM3cjNlenY0&utm_source=qr" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@kenko_sushi?_t=ZM-8wE27iVuIpb&_r=1" target="_blank">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+            </div>
+        <p>© 2025 Kenko Sushi Fusión. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for internal links (solo para links dentro de esta página)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Close menu if open after clicking a link
+                const navLinks = document.getElementById('nav-links');
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    document.getElementById('hamburger-menu').classList.remove('active');
+                }
+            });
+        });
+
+        // Hamburger menu functionality (Igual que en index.html)
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburgerMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburgerMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside (Igual que en index.html)
+        document.addEventListener('click', (event) => {
+            if (!navLinks.contains(event.target) && !hamburgerMenu.contains(event.target)) {
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    hamburgerMenu.classList.remove('active');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

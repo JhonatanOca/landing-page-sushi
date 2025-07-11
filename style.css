@@ -1,4 +1,4 @@
-/* Estilos Generales */
+/* Estilos Generales (sin cambios) */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -25,7 +25,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Botón general */
+/* Botón general (sin cambios) */
 .button {
     display: inline-block;
     background-color: #000000;
@@ -44,7 +44,7 @@ a:hover {
     transform: translateY(-2px);
 }
 
-/* Navbar */
+/* Navbar (sin cambios) */
 .navbar {
     background-color: #000000; /* Negro para la navbar */
     padding: 15px 20px;
@@ -106,7 +106,7 @@ a:hover {
 }
 
 .nav-links .nav-button {
-    background-color: #F5F5DC; /* Beige claro para el botón del menú */
+    background-color: #Fdd094; /* Beige claro para el botón del menú */
     color: #000000;
     padding: 8px 18px;
     border-radius: 5px;
@@ -118,7 +118,7 @@ a:hover {
     color: #000000;
 }
 
-/* Hamburger Menu Icon */
+/* Hamburger Menu Icon (sin cambios) */
 .hamburger-menu {
     display: none; /* Oculto por defecto en pantallas grandes */
     flex-direction: column;
@@ -136,7 +136,7 @@ a:hover {
     transition: all 0.3s ease-in-out;
 }
 
-/* Animation for hamburger to close icon */
+/* Animation for hamburger to close icon (sin cambios) */
 .hamburger-menu.active .bar:nth-child(2) {
     opacity: 0;
 }
@@ -149,7 +149,7 @@ a:hover {
     transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Header (Hero Section) */
+/* Header (Hero Section) (sin cambios) */
 .hero {
     position: relative;
     background-color: #FFFFFF;
@@ -196,10 +196,10 @@ a:hover {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
 
-/* Galería de Fotos */
+/* Galería de Fotos (sin cambios) */
 .gallery {
     padding: 60px 20px;
-    background-color: #F5F5DC;
+    background-color: #Fdd094;
 }
 
 .gallery h2 {
@@ -217,12 +217,12 @@ a:hover {
     margin-right: auto;
 }
 
-.gallery-item { /* Contenedor para cada imagen y nombre */
+.gallery-item {
     background-color: #FFFFFF;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-    overflow: hidden; /* Asegura que el contenido no se desborde */
-    text-align: center; /* Centra el nombre del platillo */
+    overflow: hidden;
+    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -235,21 +235,21 @@ a:hover {
     width: 100%;
     height: 250px;
     object-fit: cover;
-    display: block; /* Elimina el espacio extra debajo de la imagen */
-    border-bottom: 1px solid #EEE; /* Pequeña línea divisoria */
+    display: block;
+    border-bottom: 1px solid #EEE;
 }
 
 .gallery-item .dish-name {
     font-weight: bold;
     color: #000000;
     padding: 15px 10px;
-    margin: 0; /* Elimina márgenes por defecto del párrafo */
+    margin: 0;
     font-size: 1.1em;
 }
 
-/* Ubicación y Horario */
+/* Ubicación y Horario (sin cambios) */
 .location-hours {
-    background-color: #FFFFFF;
+    background-color:#F5F5DC;
     padding: 60px 20px;
     text-align: center;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05);
@@ -282,7 +282,7 @@ a:hover {
     margin-bottom: 5px;
 }
 
-/* Footer */
+/* Footer (sin cambios) */
 footer {
     background-color: #000000;
     color: #FFFFFF;
@@ -297,17 +297,79 @@ footer {
 
 .social-links a {
     display: inline-block;
-    margin: 0 20px; /* Aumentado el margen horizontal para más separación */
-    color: #FFFFFF; /* Color blanco para los iconos */
-    font-size: 1.8em; /* Tamaño de los iconos */
+    margin: 0 20px;
+    color: #FFFFFF;
+    font-size: 1.8em;
     transition: transform 0.2s ease;
 }
 
-.social-links a:hover { /* Efecto de hover para los iconos */
+.social-links a:hover {
     transform: scale(1.1);
 }
 
-/* Media Queries para Responsividad */
+/* --- ESTILOS PARA LA PÁGINA NOSOTROS --- */
+
+.about-hero {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.about-hero h1 {
+    font-size: 3em;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.about-hero p {
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+.about-section {
+    padding: 60px 20px;
+    background-color: #FFFFFF;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.about-section h2 {
+    margin-top: 0;
+    font-size: 2.5em;
+}
+
+.content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.content-wrapper p {
+    margin-bottom: 20px;
+}
+
+.philosophy {
+    background-color: #F5F5DC; /* Beige suave */
+}
+
+/* Estilos para la sección de instalaciones (galería de imágenes) */
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.facilities-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries para Responsividad (sin cambios en las reglas existentes) */
 @media (max-width: 768px) {
     .hamburger-menu {
         display: flex;
@@ -377,6 +439,38 @@ footer {
     .gallery-grid img {
         height: 200px;
     }
+
+    .map-container {
+    position: relative;
+    /* Define la relación de aspecto del mapa (ej. 75% para una relación 4:3) */
+    padding-bottom: 75%; 
+    height: 0;
+    overflow: hidden;
+    margin-top: 20px; /* Ajuste para separar del texto anterior */
+    margin-bottom: 20px; /* Ajuste para separar del texto posterior */
+    max-width: 100%; /* Asegura que no se desborde */
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* El iframe ocupa el 100% del ancho del contenedor */
+    height: 100%; /* El iframe ocupa el 100% del alto del contenedor */
+}
+
+    /* Adaptación para la página de Nosotros en móviles */
+    .about-hero {
+        padding: 60px 15px;
+    }
+
+    .about-hero h1 {
+        font-size: 2em;
+    }
+
+    .about-section {
+        padding: 40px 15px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -397,7 +491,7 @@ footer {
         font-size: 0.9em;
     }
 
-    .gallery h2, .location-hours h2 {
+    .gallery h2, .location-hours h2, .about-section h2 {
         font-size: 2em;
     }
 
